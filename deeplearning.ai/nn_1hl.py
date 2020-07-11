@@ -101,7 +101,7 @@ def compute_cost(A2, Y, parameters):
 
     # Compute the cross-entropy cost
     logprobs = np.multiply(np.log(A2),Y)
-    cost = - np.sum(logprobs) 
+    cost = - (1/m)*np.sum(logprobs) 
     cost = float(np.squeeze(cost))  
 
     assert(isinstance(cost, float))
